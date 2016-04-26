@@ -3,4 +3,8 @@ angular.module('contatooh', ['ngRoute']).config(function($routeProvider){
     templateUrl: 'partials/contatos.html',
     controller: 'ContatosController'
   });
+  $routeProvider.when('/contato/:contatoId', {
+    templateUrl: 'partials/contato.html',
+    controller: 'ContatoController'
+  });
 });
