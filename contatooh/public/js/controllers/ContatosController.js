@@ -20,4 +20,5 @@ angular.module('contatooh').controller('ContatosController', function ($scope){
       "email": "joao3@teste.com"
     }
   ];
+  $scope.filtro ='';
 });
