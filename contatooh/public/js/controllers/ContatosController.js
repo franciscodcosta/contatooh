@@ -1,4 +1,4 @@
-angular.module('contatooh').controller('ContatosController', function ($scope, $http){
+angular.module('contatooh').controller('ContatosController', function ($scope, $resource){
   $scope.contatos = [];
   $scope.filtro ='';
   
