@@ -17,7 +17,12 @@ angular.module('contatooh').controller('ContatosController', function ($scope, $
   buscaContatos();
   
   $scope.remove = function(contato){
-    console.log(contato);
-  }
+    Contato.delete({id: contato._id},
+    buscaContatos,
+    function(erro){
+        console.log("Não foi possível remover o contato");
+        console.log(erro);
+      });
+  };
   
 });
