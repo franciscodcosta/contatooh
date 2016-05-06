@@ -16,4 +16,8 @@ angular.module('contatooh').controller('ContatosController', function ($scope, $
   }
   buscaContatos();
   
+  $scope.remove = function(contato){
+    console.log(contato);
+  }
+  
 });
