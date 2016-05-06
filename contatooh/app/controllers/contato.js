@@ -24,7 +24,7 @@ module.exports = function(){
 			return contato._id != idContato;
 		});
 		res.status(204).end();
-		console.log('API: removeContato: ';)
+		console.log('API: removeContato: ');
 	};
 
 	return controller;
