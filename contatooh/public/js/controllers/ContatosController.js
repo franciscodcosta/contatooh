@@ -25,4 +25,6 @@ angular.module('contatooh').controller('ContatosController', function ($scope, $
       });
   };
   
+  $scope.mensagem = {texto: ''};
+  
 });
