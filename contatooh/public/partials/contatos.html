@@ -19,7 +19,7 @@
 		</tr>
 		<tr ng-repeat="contato in contatos | filter: filtro">
 			<td>
-				<a>{{contato.nome}}</a>
+				<a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
 			</td>
 			<td>
 				{{contato.email}}
