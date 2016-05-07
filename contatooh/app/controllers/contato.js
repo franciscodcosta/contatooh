@@ -43,7 +43,7 @@ module.exports = function(){
 	
 	function atualiza(contatoAlterar){
 		contatos = contatos.map(function(contato){
-			if(contatos._id == contatoAlterar._id){
+			if(contato._id == contatoAlterar._id){
 				contato = contatoAlterar;
 			}
 			return contato;
