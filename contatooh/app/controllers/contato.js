@@ -25,7 +25,7 @@ module.exports = function(app){
 				console.log(erro);
 				res.status(404).json(erro);
 			}
-			);
+		);
 	};
 	controller.removeContato = function (req, res){
 		var _id = req.params.id;
@@ -37,9 +37,34 @@ module.exports = function(app){
 			function(erro){
 				return console.error(erro);
 			}
-			);
+		);
 	};
-	controller.salvaContato = function (req, res){};
+	controller.salvaContato = function (req, res){
+		var _id = req.body._id;
+		if (_id){
+			Contato.findByIdAndUpdate(_id, req.body).exec()
+			.then(
+				function(contato){
+					res.json(contato);
+				},
+				function (erro) {
+					console.error(erro);
+					res.status(500).json(erro);
+				}
+			);
+		} else {
+			Contato.create(req.body)
+			.then(
+				function (contato) {
+					res.status(201).json(contato);
+				},
+				function (erro) {
+					console.log(erro);
+					res.status(500).json(erro);
+				}
+			);
+		}
+	};
 	return controller;
 
 
