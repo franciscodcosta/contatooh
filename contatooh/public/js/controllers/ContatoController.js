@@ -28,7 +28,7 @@ angular.module('contatooh').controller('ContatoController',
         });
     };
     
-    Contato.query(function(contaotos){
+    Contato.query(function(contatos){
       $scope.contatos = contatos;
     });
     
